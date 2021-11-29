@@ -77,15 +77,33 @@ footer a {
     color: rgb(116, 116, 116);
 }
 
+@media screen and (min-width: 1280px) {
+    header {
+        min-height: 800px;
+    }
+
+    .headingbox {
+        margin-left: 5%;
+    }
+}
+
 @media screen and (max-width: 1280px) {
     header {
         min-height: 800px;
+    }
+
+    .headingbox {
+        margin-left: 5%;
     }
 }
 
 @media screen and (max-width: 1024px) {
     header {
-        min-height: 450px;
+        min-height: 710px;
+    }
+
+    .headingbox {
+        margin-left: 5%;
     }
 }
 
