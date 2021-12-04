@@ -21,6 +21,16 @@
     display: grid;  
     place-items: center;
     color: rgb(66, 66, 66);
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+}
+
+.container a:hover {
+    color: rgb(184, 92, 92);
 }
 
 .container:hover {
