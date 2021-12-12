@@ -19,7 +19,6 @@ body {
     background-position: center;
     background-size: cover;
     display: grid;
-    grid-template-rows: 50px auto 100px;
     grid-template-areas:
         'nav'
         'hero'
@@ -29,6 +28,7 @@ body {
 nav {
     grid-area: nav;
     padding: 10px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -56,13 +56,14 @@ a:hover {
 
 .hero {
     grid-area: hero;
+    height: 500px;
     display: grid;
     place-items: center;
     color: white;
 }
     
 table {
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
     border-radius: 10px;
     overflow: hidden;
@@ -75,11 +76,6 @@ tr.atas {
 
 tr.bodies {
     background-color: rgba(255,255,255,0.1);
-}
-
-td.keterangan {
-    width: 300px;
-    height: 50px;
 }
 .absen {
     width: 70px;
@@ -123,7 +119,7 @@ footer a img {
     .logo {
         float: left;
         animation: op 2s;
-        display: block;
+        display: none;
     }
     
     .menu {
@@ -133,7 +129,7 @@ footer a img {
     }
     
     .menu a {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     
     a:hover {
@@ -146,22 +142,45 @@ footer a img {
         display: grid;
         place-items: center;
         color: white;
+        padding: 20px;
     }
-    
+        
     table {
-        font-size: 15px;
+        font-size: 10px;
         text-align: center;
         border-radius: 10px;
         overflow: hidden;
+    }
+    
+    tr.atas {
+        background-color: rgb(44, 44, 44);
+        height: 50px;
+    }
+    
+    tr.bodies {
+        background-color: rgba(255,255,255,0.1);
+    }
+    .absen {
+        width: 70px;
+    }
+    
+    .nama {
+        width: 200px;
+        height: 40px;
     }
     
     tr:hover {
         transform: scale(1.02);
     }
     
+    .file {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
     footer {
         grid-area: footer;
-        height: 100px;
         display: grid;
         place-items: center;
     }
@@ -172,13 +191,86 @@ footer a img {
 }
 
 @media screen and (min-width: 1240px) {
-    .container {
-        height: 945px;
+    nav {
+        grid-area: nav;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-
+    
+    .logo {
+        float: left;
+        animation: op 2s;
+        display: block;
+    }
+    
+    .menu {
+        float: right;
+        overflow: hidden;
+        animation: op 5s;
+    }
+    
+    .menu a {
+        margin-left: 10px;
+    }
+    
+    a:hover {
+        color: rgb(255, 129, 129);
+    }
+    
     .hero {
-        height: 745px;
-        font-size: 40px;
+        grid-area: hero;
+        height: 700px;
+        display: grid;
+        place-items: center;
+        color: white;
+        padding: 20px;
+    }
+        
+    table {
+        font-size: 15px;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    tr.atas {
+        background-color: rgb(44, 44, 44);
+        height: 50px;
+    }
+    
+    tr.bodies {
+        background-color: rgba(255,255,255,0.1);
+    }
+    .absen {
+        width: 70px;
+    }
+    
+    .nama {
+        width: 200px;
+        height: 50px;
+    }
+    
+    tr:hover {
+        transform: scale(1.02);
+    }
+    
+    .file {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    footer {
+        grid-area: footer;
+        display: grid;
+        place-items: center;
+    }
+    
+    footer a img {
+        animation: dub 4s;
     }
 }
 
